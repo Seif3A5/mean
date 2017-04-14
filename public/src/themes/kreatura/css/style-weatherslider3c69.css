@@ -1,0 +1,169 @@
+
+
+
+/* DEFAULT COLORS & BACKGROUNDS */
+
+
+
+/* BODY, HTML, LAYOUT */
+
+html {
+	background: url(../img/bg-weatherslider.jpg) center top fixed;
+}
+
+
+
+/* HEADER */
+
+header h1 {
+	color: white;
+	text-shadow: 0px 0px 30px #82def5;
+}
+
+header h1 span {
+	color: #4ac1e9;
+}
+
+/* Header navigation */
+
+header nav {
+	position: absolute;
+	top: auto;
+	right: 0px;
+	bottom: 10px;
+}
+
+
+
+/* CONTENT */
+
+/* Sections */
+
+#content section.highlighted h3,
+#content section h3.highlighted {
+	color: #127ab3;
+}
+
+.slider-container {
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.slider-widgets-container {
+	position: relative;
+	padding-top: 50px;
+	z-index: 4;
+}
+
+.slider-widget-container {
+	width: 33%;
+	height: 200px;
+	min-width: 240px;
+	float: left;
+}
+
+#weather-showcase {
+	width: 960px;
+	height: 480px;
+}
+
+.version-recommender {
+	margin-top: 20px;
+}
+
+.version-recommender a {
+	color: #111;
+	background: #ddd;
+	background: rgba(0,0,0,.1);
+}
+
+.version-recommender a:hover {
+	color: white;
+	background: #127ab3;
+}
+
+
+
+
+/* "GET THIS" BUTTON */
+
+#get,
+#get:hover {
+	background: #127ab3;
+	color: white;
+}
+
+.get {
+	background: #127ab3;
+	color: white;
+}
+
+
+
+/* Header navigation */
+
+header nav ul {
+	background: #127ab3;
+}
+
+header nav ul li:hover a,
+header nav ul li:hover span {
+	color: #127ab3;
+	background: white;
+}
+
+/* Lists */
+
+.cur-list-item:hover {
+	background: #127ab3;
+}
+
+#content .list {
+	background: #127ab3;
+}
+
+.cur-list-item .list b {
+	border-top: 10px solid #127ab3;
+}
+
+.selectable-list-item:hover,
+.list .highlighted {
+	background: #3e95d1;
+}
+
+.list-title {
+	border-bottom: 1px solid #90c6f0;
+}
+
+
+
+/* FOOTER */
+
+footer {
+	border-top: 1px solid #1b5b99;
+}
+
+footer .bg {
+	background: #127ab3;
+}
+
+footer a:hover {
+	color: #002a53;
+}
+
+
+
+/* RESPONSIVE */
+
+.mobiledevice header,
+.mobiledevice header .content {
+	height: 170px;
+}
+
+@media screen and (max-width: 1023px) {
+
+	header,
+	header .content {
+		height: 170px;
+	}
+}

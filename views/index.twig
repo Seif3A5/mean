@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Mr.Bricolage</title>
+    <meta name="description" content="Beavis is a responsive HTML5 coming soon template by theme-nerds."/>
+    <meta name="keywords"
+          content="beavis, responsive coming soon template, under construction template, multipurpose, responsive template, html5 template, themeforest.net, bootstrap, html5, creative, landing page, sass, clean, design, modern, angular js, mailchimp subscription,"/>
+    <meta name="author" content="theme-nerds"/>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--Fonts - changed to Source Code Pro-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,500,300' rel='stylesheet' type='text/css'>
+
+    <!--CSS-->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 450px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css"/>
+</head>
+
+<body data-ng-app="contactApp">
+
+<!--Preloader-->
+<div class="preloader-it">
+    <div class="la-anim-1"></div>
+</div>
+<!--/Preloader-->
+
+<!--Container-->
+<div class="pad-zero">
+
+    <!--Splitlayout -->
+    <div id="splitlayout" class="splitlayout reset-layout">
+
+        <!--Intro-->
+        <div class="intro">
+
+            <!--Left Content Intro-->
+            <div class="side side-left">
+
+                <!--Left Nav-->
+
+                <!--/Left Nav-->
+
+                <div class="col-xs-12 align-center  sec-pad-right content-wrap  text-center">
+
+                    <!--Logo-->
+                    <header class="logo">
+
+                    </header>
+                    <!--/Logo-->
+
+                    <!--main content-->
+                    <section class="intro-text  padding-top-lg-100 padding-top-md-75 padding-top-xs-30">
+                        <div class="ani-wrap">
+                            <h1 class="animated ">Get the nearest repairer</h1>
+                        </div>
+                        <div class="ani-wrap">
+                            <!--Counter-->
+
+                            <!--Counter-->
+                        </div>
+                        <p class="col-lg-10 col-sm-12 pad-zero align-center">
+
+                        </p>
+                        <div class="clearfix"></div>
+
+                        <!--Notify Sec-->
+                        <section class="notify-cmpt">
+                            <div class="notify-wrap">
+                                <div id="notify_close" style="
+    margin-left: -9%;
+    margin-top: -7%;
+"><span>X</span></div>
+
+                                <div id="weatherslider_1" style="width: 700%;height: 600%;position: relative;">
+                                    <span class="ws-location">GEOLOCATION</span>
+                                </div>
+                                <div class="call-to-action about"
+                                     style=" display:block; margin-left: 14%;margin-top: 58%;transform: rotate(0deg);font-size: medium;">
+                                    <div>
+								<span class="goto-next">
+									Next
+									<span class="add-sep"></span>
+								</span>
+                                        <span class="goto-close opacity-hide">
+									Close
+									<span class="add-sep"></span>
+								</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="notify-btn main-menu">
+										<span class="btn btn-default"><span
+                                                    class="button-label goto-next text-left">GET NEAR REPAIRER</span>
+										<span class="mask"></span>
+										</span>
+                            </div>
+                            <span style="color: white; font-size: 20px" id="location_name"></span>
+
+                            <script>
+
+                                function initMap() {
+                                    var myLatLng = {lat: -25.363, lng: 131.044};
+
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 4,
+                                        center: myLatLng
+                                    });
+
+                                    var marker = new google.maps.Marker({
+                                        position: myLatLng,
+                                        map: map,
+                                        title: 'Hello World!'
+                                    });
+                                }
+
+                            </script>
+
+                        </section>
+                        <!--/Notify Sec-->
+
+                        <div class="clearfix"></div>
+                    </section>
+                    <!--/main content-->
+
+                </div>
+
+                <div class="container-fluid pad-zero social-wrpper">
+
+                    <!--Footer-->
+                    <footer class="copyright-text margin-sm-30 margin-top-xs-0">
+
+                        <!--Social Icons-->
+                        <ul class="social-icons animated">
+                            <li>
+                                <a href="#" class="social-icon">
+                                    <span class="fa" data-hover="&#xf09a;">&#xf09a;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-icon">
+                                    <span class="fa" data-hover="&#xf099;">&#xf099;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-icon">
+                                    <span class="fa" data-hover="&#xf16e;">&#xf16e;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-icon">
+                                    <span class="fa" data-hover="&#xf16d;">&#xf16d;</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--/Social Icons-->
+
+                        <p>Pampered by EKeep 1 © 2017</p>
+                    </footer>
+                    <!--/Footer-->
+
+                </div>
+            </div>
+            <!--/Left Content Intro-->
+
+            <!--Right Content Intro-->
+            <div class="side side-right">
+
+                <!--Right Nav-->
+                <!-- <div class="call-to-action contact">
+                    <div>
+                        <span class="goto-next">
+                            contact
+                            <span class="add-sep"></span>
+                        </span>
+                        <span class="goto-close opacity-hide">
+                            close X
+                            <span class="add-sep"></span>
+                        </span>
+                    </div>
+                </div> -->
+                <!--/Right Nav-->
+
+                <section class="timer-sec">
+
+                    <!--Clock wrap-->
+                    <div class="clock-wrap">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" width="81px" height="81px"
+                                viewBox="0 0 81 81" enable-background="new 0 0 81 81" xml:space="preserve">
+								<switch>
+                                    <g>
+                                        <circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="40.5" cy="40.5"
+                                                r="40"/>
+                                        <circle fill="#FFFFFF" cx="40.5" cy="40.5" r="2.806"/>
+                                        <line id="min" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                              stroke-miterlimit="10" x1="40.5" y1="10.5" x2="40.5" y2="40.5"/>
+                                        <line id="hour" fill="none" stroke="#FFFFFF" stroke-width="1.5"
+                                              stroke-miterlimit="10" x1="40.5" y1="20.5" x2="40.5" y2="40.5"/>
+                                        <line id="sec" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="40.5"
+                                              y1="7.5" x2="40.5" y2="40.5"/>
+                                    </g>
+                                </switch>
+								</svg>
+                    </div>
+                    <!--/Clock wrap-->
+
+                </section>
+            </div>
+            <!--/Right Content Intro-->
+
+        </div>
+        <!--/Intro-->
+
+        <!--Left Section-->
+        <div class="page page-left">
+            <div class="page-inner full-height">
+
+                <!--Projects Sec-->
+                <section class="container-fluid align-center text-left animated sec-pad padding-btm-xs-0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Repaires List</h3>
+
+                            <div id="map"></div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="project-gal-wrap">
+                         <div class="project-gallery row" itemscope itemtype="http://schema.org/ImageGallery">
+                            <figure class="col-sm-6 margin-btm-lg margin-btm-xs" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                              <a  id="myHeader1" href="javascript:showonlyone('newboxes1');">
+                                  <img class="img-responsive" src="img/project1.jpg" itemprop="thumbnail" alt="Image description" />
+                                  <div class="hover"><span>+</span></div>
+                              </a>
+                                <figcaption itemprop="caption description">Vains in the Earth</figcaption>
+
+                            </figure>
+
+                            <figure class="col-sm-6 margin-btm-lg margin-btm-xs" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                              <a href="img/project2.jpg" itemprop="contentUrl" data-size="730x490">
+                                  <img class="img-responsive" src="img/project2.jpg" itemprop="thumbnail" alt="Image description" />
+                                  <div class="hover"><span>+</span></div>
+                              </a>
+                                <figcaption itemprop="caption description">Sun Dried</figcaption>
+                            </figure>
+                            <figure class="col-sm-6 margin-btm-xs" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                              <a href="img/project3.jpg" itemprop="contentUrl" data-size="730x490">
+                                  <img class="img-responsive" src="img/project3.jpg" itemprop="thumbnail" alt="Image description" />
+                                  <div class="hover"><span>+</span></div>
+                              </a>
+                                <figcaption itemprop="caption description">Above Sea Level</figcaption>
+                            </figure>
+                            <figure class="col-sm-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                              <a href="img/project4.jpg" itemprop="contentUrl" data-size="730x490">
+                                  <img class="img-responsive" src="img/project4.jpg" itemprop="thumbnail" alt="Image description" />
+                                  <div class="hover"><span>+</span></div>
+                              </a>
+                                <figcaption itemprop="caption description">Coloured Mountains
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div> -->
+                    <div class="newboxes" id="newboxes1" style=" display: none;padding: 5px;">
+                        <h3>Set Painting Parameters</h3>
+                        <form data-ng-submit="submit(contactform, $event)" name="contactform" method="post"
+                              class="row form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email"
+                              role="form">
+                            <div class="form-group input--hoshi col-sm-6"
+                                 data-ng-class="{ 'has-error': contactform.inputName.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <input autocomplete="off" data-ng-model="formData.inputName" type="text"
+                                           class="form-control input__field input input__field--hoshi ng-pristine ng-invalid ng-invalid-required ng-touched"
+                                           id="inputName" name="inputName" placeholder="Param1" required="">
+                                    <label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group  input--hoshi col-sm-6"
+                                 data-ng-class="{ 'has-error': contactform.inputEmail.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <input autocomplete="off" data-ng-model="formData.inputEmail" type="email"
+                                           class="form-control input input__field input__field--hoshi ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
+                                           placeholder="Param2" id="inputEmail" name="inputEmail" required="">
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group  input--hoshi col-sm-12"
+                                 data-ng-class="{ 'has-error': contactform.inputMessage.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <textarea data-ng-model="formData.inputMessage"
+                                              class="form-control input input__field input__field--hoshi ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                              rows="4" id="inputMessage" name="inputMessage" placeholder="Param3"
+                                              required=""></textarea>
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <div class="align-center">
+                                    <!-- <button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled"style="
+                  color: black;
+                  width: 100%;
+                  ">
+                                    <span class="mask"></span>
+                                    Generate
+                                    </button> -->
+                                </div>
+                            </div>
+                        </form>
+                        <form action="checkout.html">
+                            <input type="submit" value="Generate" class="btn btn-default"
+                                   data-ng-disabled="submitButtonDisabled" style="
+    color: black;
+    width: 100%;
+">
+                        </form>
+                    </div>
+                    <div class="newboxes" id="newboxes2" style="display: none;padding: 5px;">
+                        <h3>Set Tools Parameters</h3>
+                        <form data-ng-submit="submit(contactform, $event)" name="contactform" method="post"
+                              class="row form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email"
+                              role="form">
+                            <div class="form-group input--hoshi col-sm-6"
+                                 data-ng-class="{ 'has-error': contactform.inputName.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <input autocomplete="off" data-ng-model="formData.inputName" type="text"
+                                           class="form-control input__field input input__field--hoshi ng-pristine ng-invalid ng-invalid-required ng-touched"
+                                           id="inputName" name="inputName" placeholder="Param1" required="">
+                                    <label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group  input--hoshi col-sm-6"
+                                 data-ng-class="{ 'has-error': contactform.inputEmail.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <input autocomplete="off" data-ng-model="formData.inputEmail" type="email"
+                                           class="form-control input input__field input__field--hoshi ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
+                                           placeholder="Param2" id="inputEmail" name="inputEmail" required="">
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group  input--hoshi col-sm-12"
+                                 data-ng-class="{ 'has-error': contactform.inputMessage.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <textarea data-ng-model="formData.inputMessage"
+                                              class="form-control input input__field input__field--hoshi ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                              rows="4" id="inputMessage" name="inputMessage" placeholder="Param3"
+                                              required=""></textarea>
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <div class="align-center">
+                                    <!-- <button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled" style="
+                  color: black;
+                  width: 100%;
+                  ">
+                                    <span class="mask"></span>
+                                    Generate
+                                    </button> -->
+                                </div>
+                            </div>
+                        </form>
+                        <form action="checkout.html">
+                            <input type="submit" value="Generate" class="btn btn-default"
+                                   data-ng-disabled="submitButtonDisabled" style="
+    color: black;
+    width: 100%;
+">
+                        </form>
+                    </div>
+                    <div class="newboxes" id="newboxes3" style="display: none;padding: 5px;">
+                        <h3>Set Gardinig Parameters</h3>
+                        <form data-ng-submit="submit(contactform, $event)" name="contactform" method="post"
+                              class="row form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email"
+                              role="form">
+                            <div class="form-group input--hoshi col-sm-6"
+                                 data-ng-class="{ 'has-error': contactform.inputName.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <input autocomplete="off" data-ng-model="formData.inputName" type="text"
+                                           class="form-control input__field input input__field--hoshi ng-pristine ng-invalid ng-invalid-required ng-touched"
+                                           id="inputName" name="inputName" placeholder="Param1" required="">
+                                    <label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group  input--hoshi col-sm-6"
+                                 data-ng-class="{ 'has-error': contactform.inputEmail.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <input autocomplete="off" data-ng-model="formData.inputEmail" type="email"
+                                           class="form-control input input__field input__field--hoshi ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"
+                                           placeholder="Param2" id="inputEmail" name="inputEmail" required="">
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group  input--hoshi col-sm-12"
+                                 data-ng-class="{ 'has-error': contactform.inputMessage.$invalid &amp;&amp; submitted }">
+                                <div class="input-wrap">
+                                    <textarea data-ng-model="formData.inputMessage"
+                                              class="form-control input input__field input__field--hoshi ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                              rows="4" id="inputMessage" name="inputMessage" placeholder="Param3"
+                                              required=""></textarea>
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <div class="align-center">
+                                    <!-- <button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled" style="
+                  color: black;
+                  width: 100%;
+                  ">
+                                    <span class="mask"></span>
+                                    Generate
+                                    </button> -->
+                                </div>
+                            </div>
+                        </form>
+                        <form action="checkout.html">
+                            <input type="submit" value="Generate" class="btn btn-default"
+                                   data-ng-disabled="submitButtonDisabled" style="
+    color: black;
+    width: 100%;
+">
+                        </form>
+                    </div>
+                </section>
+                <!--/Projects Sec-->
+
+            </div>
+        </div>
+        <!--/Left Section-->
+
+        <!--Right Section-->
+        <div class="page page-right">
+            <div class="page-inner full-height">
+
+                <!--Contact Sec-->
+                <section>
+
+                    <!--form sec-->
+                    <section data-ng-controller="ContactController"
+                             class="container-fluid align-center animated  sec-pad">
+                        <h3>Hey <span data-ng-bind="formData.inputName||'There'">There</span>, happy to hear from you.
+                        </h3>
+
+                        <div>
+                            <form data-ng-submit="submit(contactform, $event)" name="contactform" method="post"
+                                  class="row form-horizontal" role="form">
+                                <div class="form-group input--hoshi col-sm-6"
+                                     data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                                    <div class="input-wrap">
+                                        <input autocomplete="off" data-ng-model="formData.inputName" type="text"
+                                               class="form-control input__field input input__field--hoshi"
+                                               id="inputName" name="inputName" placeholder="Name" required>
+                                        <label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group  input--hoshi col-sm-6"
+                                     data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                                    <div class="input-wrap">
+                                        <input autocomplete="off" data-ng-model="formData.inputEmail" type="email"
+                                               class="form-control input input__field input__field--hoshi"
+                                               placeholder="Email" id="inputEmail" name="inputEmail" required>
+                                        <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group  input--hoshi col-sm-12"
+                                     data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                                    <div class="input-wrap">
+                                        <textarea data-ng-model="formData.inputMessage"
+                                                  class="form-control input input__field input__field--hoshi" rows="4"
+                                                  id="inputMessage" name="inputMessage" placeholder="message"
+                                                  required></textarea>
+                                        <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <div class="align-center">
+                                        <button type="submit" class="btn btn-default"
+                                                data-ng-disabled="submitButtonDisabled" style="
+    width: 100%;
+">
+                                            <span class="mask"></span>
+                                            send
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p data-ng-class="result">{{ resultMessage }}</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="address-detail">
+                                <div class="col-sm-4 margin-btm-sm">
+                                    <div class="sep-wrap">
+                                        <span class="add-sep"></span>
+                                    </div>
+                                    <span>visit</span>
+                                    <p>350 Fifth Avenue, New York 10118.</p>
+                                </div>
+                                <div class="col-sm-4 margin-btm-sm">
+                                    <div class="sep-wrap">
+                                        <span class="add-sep"></span>
+                                    </div>
+                                    <span>reach</span>
+                                    <a href="mailto:hello@theme-nerds.com" target="_blank">inquiry@beavis.com</a>
+                                </div>
+
+                                <div class="col-sm-4 margin-btm-sm">
+                                    <div class="sep-wrap">
+                                        <span class="add-sep"></span>
+                                    </div>
+                                    <span>call</span>
+                                    <a href="callto:954788315970" target="_blank">+95 (478) 831-5970</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--/form sec-->
+
+                    <!--google map-->
+                    <section class="map-sec">
+                        <div id="map_canvas"></div>
+                    </section>
+                    <!--/google map-->
+
+
+                </section>
+                <!--/Contact Sec-->
+
+            </div>
+        </div>
+        <!--/Right Section-->
+
+    </div>
+    <!-- /Splitlayout -->
+
+</div>
+<!-- /Container -->
+
+<!--PhotoSwipe Popup-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--/PhotoSwipe Popup-->
+
+<!-- Scripts -->
+<script src="../src/js/jquery-1.11.3.min.js"></script>
+<script src="../src/js/angular.min.js"></script>
+<script src="../src/js/modernizr.custom.js"></script>
+<script src="../src/js/cbpSplitLayout.js"></script>
+<script src="../src/js/app.js"></script>
+<script src="../src/js/controllers.js"></script>
+<script src="../src/js/notifyMe.js"></script>
+<script src="../src/js/jquery.placeholder.js"></script>
+<script src="../src/js/photoswipe.min.js"></script>
+<script src="../src/js/photoswipe-ui-default.min.js"></script>
+<script src="../src/js/jquery.nicescroll.js"></script>
+<script src="../src/js/jquery.countdown.js"></script>
+
+
+</body>
+
+<!-- Mirrored from hencework.com/theme/beavis/comingsoon/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Feb 2017 14:45:45 GMT -->
+</html>
+
+
+<link rel='dns-prefetch' href='http://s.w.org/'/>
+<link rel="alternate" type="application/rss+xml"
+      title="Kreatura Media &raquo; WeatherSlider Premium jQuery Weather Widget Comments Feed"
+      href="../src/feed/index.html"/>
+
+
+<script type='text/javascript' src='../src/js/wpemojiSettings.js'></script>
+<link rel='stylesheet' id='weatherslider_css-css'
+      href='../src/plugins/WeatherSlider/css/weatherslider6770.css?ver=2.6.5' type='text/css' media='all'/>
+
+<script type='text/javascript' src='../src/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../src/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+
+</script>
+<script type='text/javascript'
+        src='../src/plugins/wpStickies/js/wpstickies.kreaturamedia.jquery001e.js?ver=2.0.0'></script>
+
+
+<script type='text/javascript' src='../src/js/ready.js'></script>
+
+
+<div id="content">
+    <div class="slider-container">
+        <div class="sizer">
+            <script type="text/javascript">
+
+            </script>
+            <script type='text/javascript' src='../src/js/ready2.js'></script>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<script type='text/javascript' src='../src/plugins/WeatherSlider/js/jquery-easing-1.36f3e.js?ver=1.3.0'></script>
+
+<script type='text/javascript'
+        src='../src/plugins/WeatherSlider/js/jquery-animate-background-position.js?ver=2.6.5'></script>
+<script type='text/javascript'
+        src='../src/plugins/WeatherSlider/js/weatherslider.kreaturamedia.jquery6770.js?ver=2.6.5'></script>
+
+
+
+<script>
+    function showonlyone(thechosenone) {
+        var newboxes = document.getElementsByTagName("div");
+        for (var x = 0; x < newboxes.length; x++) {
+            name = newboxes[x].getAttribute("class");
+            if (name == 'newboxes') {
+                if (newboxes[x].id == thechosenone) {
+                    newboxes[x].style.display = 'block';
+                }
+                else {
+                    newboxes[x].style.display = 'none';
+                }
+            }
+        }
+    }
+</script>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfRPrxwX0M1h0vfxjTUWFbp74l62a-8mA&signed_in=true&callback=initMap"></script>
+<script src="../src/js/init.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(window).resize(function() {
+            google.maps.event.trigger(map, 'resize');
+        });
+        google.maps.event.trigger(map, 'resize');
+    });
+</script>
+
