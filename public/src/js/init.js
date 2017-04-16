@@ -60,6 +60,12 @@ $(window).on("resize", function () {
 /***** Resize function end *****/
 
 
+function sendMailAjax(id) {
+
+    $.get("/mailer?id=" + id, function (data) {
+        alert(data);
+    });
+}
 
 
 function initMap(myLatLng, markers) {
@@ -72,29 +78,44 @@ function initMap(myLatLng, markers) {
 
     console.log(markers);
 
+    var enabledPin = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|336000",
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(10, 34));
+
+    var disabledPin = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|f70707",
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(10, 34));
+
     markers.forEach(function (reparateur) {
         console.log(marker);
 
         var infowindow = new google.maps.InfoWindow({
-            content: "<h4>"+reparateur.firstname+"</h4><br/><a href='/contact?id="+reparateur._id+"'>contact</a>"
+            content: "<h4 style='color: black'>" + reparateur.firstname + "</h4><br/>" +
+            "<h4 style='color: black'>Role: " + reparateur.role + "</h4><br/>" +
+            "<a style='color: green' onclick='sendMailAjax(\"" + reparateur._id + "\")' href='#'>Click to notify</a>"
         });
-
 
         var marker = new google.maps.Marker({
             position: {lat: reparateur.location[0], lng: reparateur.location[1]},
             map: map,
+            icon: reparateur.status ? enabledPin : disabledPin,
             title: reparateur.firstname
         });
 
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
+        if (reparateur.status) {
+
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+        }
 
     });
 
     var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|6052FF",
         new google.maps.Size(21, 34),
-        new google.maps.Point(0,0),
+        new google.maps.Point(0, 0),
         new google.maps.Point(10, 34));
 
     var marker = new google.maps.Marker({

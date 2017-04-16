@@ -10,9 +10,13 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "express": "~4.14.1",
+    "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.8.7",
     "morgan": "~1.7.0",
+    "nodemailer": "^4.0.1",
     "serve-favicon": "~2.3.2",
-    "twig": "~0.10.3"
+    "twig": "~0.10.3",
+    "validator": "^7.0.0",
+    "xoauth2": "^1.2.0"
   }
 }
