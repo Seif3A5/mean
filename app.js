@@ -12,15 +12,16 @@ var valid = require('validator');
 
 var mongoose = require('mongoose');
 var usersModel = require('./models/user.model');
+var notificationsModel = require('./models/notification.model');
 var config = require('./config/config');
 
 console.log("connecting...");
 
-mongoose.connect(config.mongo.uri, usersModel);
+mongoose.connect(config.mongo.uri, usersModel, notificationsModel);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var mailer = require('./routes/mailer');
+var notification = require('./routes/notification');
 
 //var authenticateController = require('./controllers/authenticate-controller'); //jwt
 
@@ -44,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/mailer', mailer);
+app.use('/notification', notification);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

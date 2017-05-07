@@ -22,6 +22,29 @@ $(document).ready(function () {
     $('.la-anim-1').addClass('la-animate');
     $('body').niceScroll({cursorcolor: "#fff"});
 
+
+    $("#notifier").submit(function(e) {
+
+        var url = "/notification"; // the script where you handle the form input.
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#notifier").serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                if(data == "OK"){
+                    document.getElementById('id01').style.display='none';
+                    alert("Le reparateur a ete notifier");
+                }else{
+                    alert("Erruer lors de la notification: " + data);
+                }
+            }
+        });
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+    });
+
 });
 /*****Ready function end*****/
 
@@ -62,11 +85,16 @@ $(window).on("resize", function () {
 
 function sendMailAjax(id) {
 
-    $.get("/mailer?id=" + id, function (data) {
+    $.get("/notification?id=" + id, function (data) {
         alert(data);
     });
 }
 
+
+function openModal(id) {
+    document.getElementById('id01').style.display = 'block';
+    $("#reparateur").val(id);
+}
 
 function initMap(myLatLng, markers) {
     //var myLatLng = {lat: -25.363, lng: 131.044};
@@ -88,30 +116,33 @@ function initMap(myLatLng, markers) {
         new google.maps.Point(0, 0),
         new google.maps.Point(10, 34));
 
-    markers.forEach(function (reparateur) {
-        console.log(marker);
+    if (markers) {
 
-        var infowindow = new google.maps.InfoWindow({
-            content: "<h4 style='color: black'>" + reparateur.firstname + "</h4><br/>" +
-            "<h4 style='color: black'>Role: " + reparateur.role + "</h4><br/>" +
-            "<a style='color: green' onclick='sendMailAjax(\"" + reparateur._id + "\")' href='#'>Click to notify</a>"
-        });
+        markers.forEach(function (reparateur) {
+            console.log(marker);
 
-        var marker = new google.maps.Marker({
-            position: {lat: reparateur.location[0], lng: reparateur.location[1]},
-            map: map,
-            icon: reparateur.status ? enabledPin : disabledPin,
-            title: reparateur.firstname
-        });
-
-        if (reparateur.status) {
-
-            marker.addListener('click', function () {
-                infowindow.open(map, marker);
+            var infowindow = new google.maps.InfoWindow({
+                content: "<h4 style='color: black'>" + reparateur.firstname + "</h4><br/>" +
+                "<h4 style='color: black'>Role: " + reparateur.role + "</h4><br/>" +
+                '<button onclick="openModal(\'' + reparateur._id + '\')" class="w3-button w3-green w3-large">Click to notify</button>'
             });
-        }
 
-    });
+            var marker = new google.maps.Marker({
+                position: {lat: reparateur.location[0], lng: reparateur.location[1]},
+                map: map,
+                icon: reparateur.status ? enabledPin : disabledPin,
+                title: reparateur.firstname
+            });
+
+            if (reparateur.status) {
+
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                });
+            }
+
+        });
+    }
 
     var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|6052FF",
         new google.maps.Size(21, 34),
@@ -139,6 +170,8 @@ function beavis() {
 
         navigator.geolocation.getCurrentPosition(function (location) {
             console.log(location.coords.latitude);
+
+            $("#location").val(location.coords.latitude + "," + location.coords.longitude);
 
             $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + location.coords.latitude + "," + location.coords.longitude + "&sensor=true", function (data) {
                 $("#location_name").text(data.results[0].formatted_address);

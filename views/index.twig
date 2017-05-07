@@ -28,9 +28,20 @@
             height: 450px;
         }
     </style>
+
     <link rel="stylesheet" type="text/css" href="../src/css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../src/css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="../src/css/style.css"/>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-modal{
+            z-index: 9999999;
+        }
+        .w3-center{
+            color: black;
+        }
+    </style>
 </head>
 
 <body data-ng-app="contactApp">
@@ -621,6 +632,7 @@
 <script src="../src/js/photoswipe-ui-default.min.js"></script>
 <script src="../src/js/jquery.nicescroll.js"></script>
 <script src="../src/js/jquery.countdown.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
 </body>
@@ -706,3 +718,32 @@
     });
 </script>
 
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+        <h2 class="w3-center"><br>
+            Notifier Reparateur
+        </h2>
+
+        <form class="w3-container" action="/mailer" method="get" id="notifier">
+            <div class="w3-section">
+                <label style="color: black"><b>Nom</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" style="color: black" type="text" placeholder="Votre nom" name="username" required>
+                <label style="color: black"><b>Message</b></label>
+                <textarea class="w3-input w3-border" style="color: black" type="text" placeholder="" name="message" required ></textarea>
+                <label style="color: black"><b>Contact Information</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" style="color: black" type="text" placeholder="Info" name="info" required>
+                <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Notifier</button>
+
+                <input type="hidden" name="location" id="location">
+                <input type="hidden" name="reparateur" id="reparateur">
+            </div>
+        </form>
+
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Annuler</button>
+        </div>
+
+    </div>
+</div>
+</div>
