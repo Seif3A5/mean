@@ -38,7 +38,10 @@ passport.use(strategy);
 router.use(passport.initialize());
 
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    res.render('home', {title: 'Express'});
+});
+router.get('/service', function (req, res, next) {
+    res.render('service', {title: 'Express'});
 });
 
 // parse application/x-www-form-urlencoded

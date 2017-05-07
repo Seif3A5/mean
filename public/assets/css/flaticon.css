@@ -1,0 +1,51 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/flaticon/flaticon.eot");
+	src: url("../fonts/flaticon/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon/flaticon.woff") format("woff"),
+	url("../fonts/flaticon/flaticon.ttf") format("truetype"),
+	url("../fonts/flaticon/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("flaticon.html#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+
+}
+
+.flaticon-black:before { content: "\f100"; }
+.flaticon-black-1:before { content: "\f101"; }
+.flaticon-building:before { content: "\f102"; }
+.flaticon-buildings:before { content: "\f103"; }
+.flaticon-city:before { content: "\f104"; }
+.flaticon-construction:before { content: "\f105"; }
+.flaticon-construction-1:before { content: "\f106"; }
+.flaticon-construction-2:before { content: "\f107"; }
+.flaticon-construction-3:before { content: "\f108"; }
+.flaticon-draw:before { content: "\f109"; }
+.flaticon-drawing:before { content: "\f10a"; }
+.flaticon-furniture:before { content: "\f10b"; }
+.flaticon-other:before { content: "\f10c"; }
+.flaticon-paper:before { content: "\f10d"; }
+.flaticon-paper-1:before { content: "\f10e"; }
+.flaticon-people:before { content: "\f10f"; }
+.flaticon-people-1:before { content: "\f110"; }
+.flaticon-people-2:before { content: "\f111"; }
+.flaticon-people-3:before { content: "\f112"; }
+.flaticon-rest:before { content: "\f113"; }
+.flaticon-rest-1:before { content: "\f114"; }
+.flaticon-sofa:before { content: "\f115"; }
+.flaticon-tool:before { content: "\f116"; }
+.flaticon-tool-1:before { content: "\f117"; }
+.flaticon-window:before { content: "\f118"; }
