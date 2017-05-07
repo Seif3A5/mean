@@ -57,7 +57,7 @@ router.post("/", function (req, res, next) {
 
 
         var mailOptions = {
-            from: 'seyf.chakrooun@gmail.com', // sender address
+            //from: 'seyf.chakrooun@gmail.com', // sender address
             to: user.email, // list of receivers
             subject: 'Notification de ' + req.body.username, // Subject line
             html: '<b>Un profil (' + req.body.username + ') a besoin de vos services de bricolage</b><br/>' +
@@ -107,5 +107,37 @@ router.get('/', function (req, res, next) {
         });
     });
 });
+
+router.put("/notify", function (req, res) {
+
+    console.log(req.body);
+
+    Notifications.update({_id: req.body._id}, {$set: {status: req.body.status}}, function () {
+        console.log("Done updating...");
+        if (req.body.info.indexOf("@") > 0) {
+            var mailOptions = {
+                //from: 'seyf.chakrooun@gmail.com', // sender address
+                to: req.body.info, // list of receivers
+                subject: 'Notification', // Subject line
+                html: 'Cher <b>'+ req.body.username +'</b><br/>Votre demande a été traiter, veuillez contacter votre reparateur.'
+            };
+
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    res.json("Error sending mail" + error);
+                    return console.log(error);
+                }
+                console.log('Message %s sent: %s', info.messageId, info.response);
+
+                res.json("OK");
+            });
+        }else{
+            res.end();
+        }
+    });
+
+    res.end();
+});
+
 
 module.exports = router;

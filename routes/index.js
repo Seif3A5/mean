@@ -88,8 +88,22 @@ router.get("/loggedin", passport.authenticate('jwt', {session: false}), function
     res.json({message: "loggedin"});
 });
 
-router.get("/notifications", passport.authenticate('jwt', {session: false}), function (req, res) {
+router.get("/current", passport.authenticate('jwt', {session: false}), function (req, res) {
+    res.json(req.user);
+});
 
+
+router.put("/status/:status", passport.authenticate('jwt', {session: false}), function (req, res) {
+
+    Users.update({ _id: req.user._id }, { $set: { status: req.params.status }}, function () {
+        console.log("Done updating...");
+        req.user.status = req.params.status;
+    });
+
+    res.end();
+});
+
+router.get("/notifications", passport.authenticate('jwt', {session: false}), function (req, res) {
 
     Notifications.find({reparateur_id: req.user.id}, function (err, notifications) {
         if (err) {
@@ -98,8 +112,9 @@ router.get("/notifications", passport.authenticate('jwt', {session: false}), fun
             return;
         }
         console.log("notf", notifications);
-        res.json(notifications)
+        res.json(notifications);
         return;
     });
 });
+
 module.exports = router;

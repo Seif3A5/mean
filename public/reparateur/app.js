@@ -128,14 +128,39 @@
     /**********************************************************************
      * ReparateurCtrl controller
      **********************************************************************/
-    app.controller('ReparateurCtrl', function ($scope, $http) {
+    app.controller('ReparateurCtrl', function ($scope, $http, $cookies) {
         // List of users got from the server
         $scope.notifications = [];
+        $scope.currentUser = null;
 
-        $http.get('/notifications').then(function (data) {
-            $scope.notifications = data.data;
-            console.log(data.data);
+        $http.get('/notifications').then(function (response) {
+            $scope.notifications = response.data;
         });
+
+        $http.get('/current').then(function (response) {
+            $scope.currentUser = response.data;
+        });
+
+        $scope.logout = function () {
+            $cookies.remove("token");
+            window.location = "/reparateur";
+        };
+
+        $scope.changeAvailability = function (status) {
+            $http.put('/status/' + status).then(function (response) {
+                console.log("status changed");
+            });
+        };
+
+        $scope.notify = function (notification) {
+            if (notification.status != "Traitée") {
+                notification.status = "Traitée";
+                $http.put("/notification/notify", notification).then(function (response) {
+                    console.log("client has been notified");
+                });
+                alert("Le client a été notifier");
+            }
+        };
     });
 
 })();
